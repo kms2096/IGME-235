@@ -1,0 +1,212 @@
+@media screen and (min-width: 760px) {
+    #wrapper {
+        display: grid;
+        height: 150vh;
+        width: 80%;
+        margin: 2rem auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr 1fr;
+        grid-template-columns: 35% 65%;
+        grid-template-areas: "nav nav"
+                            "title subheader"
+                            "pic1 paragraph"
+                            "text paragraph"
+                            "pic2 paragraph"
+                            "pic3 paragraph"
+                            "sticky_note button";
+    }
+
+    #caption_area {
+        display: grid;
+        color: #ff7300;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "caption1 caption2";
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #wrapper {
+        display: grid;
+        height: 150vh;
+        width: 70%;
+        margin: 2rem auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "nav"
+                            "title"
+                            "subheader"
+                            "paragraph"
+                            "pic1"
+                            "text"
+                            "pic2"
+                            "pic3"
+                            "sticky_note"
+                            "button";
+    }
+
+    #caption_area {
+        display: grid;
+        text-align: center;
+        color: #ff7300;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "caption1 caption2";
+    }
+
+    .subheader {
+        text-align: center;
+        align-self: center;
+    }
+}
+
+* {
+    background-color: #01001f;
+}
+
+.navbar__container {
+    grid-area: nav;
+    font-family: sans-serif;
+}
+
+#title_container {
+    grid-area: title;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: #ff7300;
+    font-family: sans-serif;
+}
+
+#pic1>img,
+#pic2>img,
+#pic3>img {
+    min-width: 80%;
+    max-width: 100%;
+    height: auto;
+}
+
+#pic2>img {
+    transform: rotate(-5deg) scale(0.75);
+}
+
+#main_content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#pic1_container {
+    grid-area: pic1;
+}
+
+#pic2_container {
+    grid-area: pic2;
+}
+
+#pic3_container {
+    grid-area: pic3;
+}
+
+#caption_area {
+    grid-area: text;
+}
+
+#caption1 {
+    grid-area: caption1;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    /* padding-top: 50%; */
+}
+
+#caption2 {
+    grid-area: caption2;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    /* padding-top: 50%; */
+    position: relative;
+}
+
+#caption1 p,
+#caption2 p {
+    padding-right: 15px;
+}
+
+#sticky_note {
+    grid-area: sticky_note;
+    padding: 0.5rem;
+    background-color: #ff7300;
+    margin: 1rem 1rem 0 1rem;
+    font-family: sans-serif;
+} 
+
+#sticky_note p {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.5rem;
+    background-color: #ff7300;
+}
+
+#main_content {
+    grid-area: paragraph;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.2em;
+}
+
+.subheader {
+    grid-area: subheader;
+    font-size: 3rem;
+    padding: 0 1.5rem;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    color: #ff7300;
+}
+
+.navbar {
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.navbar__container {
+    display: flex;
+    width: 100%;
+}
+
+.navbar__links {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 1.5rem;
+    height: 100%;
+    font-size: 25px;
+}
+
+.navbar__links:hover {
+    color: #ff7300;
+    transition: all 0.3s ease;
+}
+
+.button {
+    grid-area: button;
+    background: #ff7300;
+    color: #000000;
+    border: none;
+    border-radius: 7%;
+    width: 25%;
+    height: auto;
+    margin: auto;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0.4rem;
+    text-decoration: none;
+    display: inline-block;
+    font-size: larger;
+}
+
+.button:hover {
+    color: #ff7300;
+    background: #000000;
+    transition: all 0.3s ease;
+}

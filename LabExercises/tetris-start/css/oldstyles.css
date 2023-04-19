@@ -1,0 +1,35 @@
+/* Do everything in this file */
+h2, h3 {
+    border-bottom: 2px solid red;
+}
+
+figure {
+    float: right;
+    width: 40%;
+    margin: auto 5%;
+}
+
+/* add some margin so that the text to its left doesn't come right up against the edge. */
+
+figure img {
+    width: 100%;
+}
+
+h2 {
+    clear: right;
+}
+
+#tetlist {
+    float: left;
+    width: 80%;
+    border: 1px solid black;
+}
+
+footer {
+    clear: both;
+    /* position: relative;
+    padding: -500px; */
+    /* position: absolute; */
+    position: fixed;
+    z-index: -1;
+}

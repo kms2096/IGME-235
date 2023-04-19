@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles2.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <title>Project 1</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <ul class="navbar__menu">
+                        <li class="navbar__item">
+                            <a href="#sticky_note" class="navbar__links">Fast Facts</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="title_container">
+                <div id="page_title">Katherine Stein</div>
+            </div>
+        </header>
+        <!-- <main> -->
+            <div class="subheader">High Noon</div>
+            <div id="pic1_container">
+                <div id="pic1">
+                    <img src="media/HighNoon/HN_Title.png" alt="High Noon title screen">
+                </div>
+            </div>
+            <div id="caption_area">
+                <div id="caption1">
+                    <p><strong>Above:</strong> Title page of High Noon</p>
+                </div>
+                <div id="caption2">
+                    <p><strong>Below:</strong> Gameplay of High Noon</p>
+                </div>
+            </div>
+            <div id="pic2_container">
+                <div id="pic2">
+                    <img src="media/HighNoon/HN_Enemies.png" alt="High Noon level with enemies">
+                </div>
+            </div>
+            <div id="pic3_container">
+                <div id="pic3">
+                    <img src="media/HighNoon/HN_Level.png" alt="High Noon level">
+                </div>
+            </div>
+            <p id="main_content">Big trouble comes riding in when a rival gang tries to take over what is left of a small Western town. Once a thriving settlement, the gang has scared everyone off of the streets. You are the only one brave enough to come out of hiding and challenge them. Take your stand at the center of the town and defend it against the onslaught of invaders such as the tank-like Coffin or the trigger-happy Cactus. Survive the wild west and be the last one standing. Can the people count on you to bring order and peace back to their quaint town?<br><br>
+                
+            Development for High Noon began in a class that is designed to teach Unity. Having used Unity before I wanted to try to branch out and expand on the scope for this game. As soon as I got the player movement working perfectly, I used the animation system in Unity to put together sprites for all of the enemies and the player. In the end, I put together animations for all eight directions the player can go in, and the firing for each direction. Afterwards, I started out by making a main menu, then I used a similar menu system to create the pause menu, a death screen, and eventually scrolling credits page.<br><br>
+                
+            In addition to having more of a focus on the animation, music, and UI, we had to create our own physics and collision system from scratch. This was one of the most fun challenges I had working on this. One of the biggest hurdles came from the player's bullets. I could not figure out how to get the bullet to shoot in the direction the player was facing. I was eventually able to get the angle of the player when they were moving but when they stopped, the angle went back to zero. I added a return statement before that that only changed the angle if the direction vector of the player was not a zero vector. After that the issue became getting the bullet's position to be updated and unchanged after spawning. After much testing, I realized I did not need to update the x and y position, I just needed to create it using the angle of the player and updating the position based on the speed and direction. This is far different than when I first started working on this, since the I was originally using a Vector3 and updating it that way.<br><br>
+                
+            I think that this is one of my best games. I was able to keep to the school schedule, the assignment requirements, and even was able to expand in some areas. Given my current level of experiences, I think that this is a good finished product that could be easily expanded upon in the future. One of the best things to come out this experience was being able to get better using systems that I never felt all that comfortable around. These include, Unity's canvas and animation systems as well as Unity's brand new input system. I was also able to get practice in designing the level, all of the menus, and a credits page.
+            </p>
+        <!-- </main> -->
+        <!-- <footer> -->
+            <div id="sticky_note">
+                <p>Time frame: September 2022 to October 2022<br>
+                    Role: Gameplay Developer, Animator, Designer, UI and Audio<br>
+                    Tools: Unity and Visual Studio<br>
+                    Languages: C#<br>
+                    Team: Katherine Stein</p>
+            </div>
+            <a href="#wrapper" class="button">Back to Top</a>
+        <!-- </footer> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+a:link {
+    color: purple;
+    background-color: yellow;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: yellow;
+} 
+
+.headline {
+    background-color: yellow;
+    margin: 20px;
+    font-size: 2rem;
+}
+
+#centeredDiv { 
+    border: 1px solid black; 
+    background-color: #ddd; 
+    height: 300px; 
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    border: 1px solid black;
+    padding:30px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+#container div {
+    border: 1px solid black;
+    background-color: #ddd;
+    margin: 5px;
+    padding: 10px;
+}

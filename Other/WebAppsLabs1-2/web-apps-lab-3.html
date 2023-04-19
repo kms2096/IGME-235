@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Apps-4-HW</title>
+	<style>
+		body{border:1px solid gray;}
+	</style>
+</head>
+<body>
+<h1>My Favorites</h1>
+<h2>My Favorite Colors</h2>
+
+<ol id="colorsList">
+    
+</ol>
+
+<h2>My Favorite Foods</h2>
+
+<ol id="foodsList">
+
+</ol>
+
+<h2>My Favorite Links</h2>
+
+<ol id="linksList">
+	
+</ol>
+
+<script>
+"use strict";
+let colors = ["blue","orange","green","purple"];
+let foods = ["pasta", "meatloaf", "funeral potatoes", "burritos", "burgers"]; // add some foods
+
+// Optional - can you figure out how to pull both the key AND the value
+// from the `links` object literal?
+let links = {
+		"RIT": "http://www.rit.edu",
+		"RWAG" : "https://www.facebook.com/RWAGclub",
+		"New Media Club" : "http://newmediaclub.cias.rit.edu"
+	}
+
+
+// Color list
+let colorList = document.getElementById("colorsList");
+
+for (let i = 0; i < colors.length; i++)
+{
+    let listNode = document.createElement("li");
+    listNode.innerText = colors[i];
+    colorList.appendChild(listNode);
+}
+
+// Food list
+let foodList = document.getElementById("foodsList");
+
+for (let food of foods) 
+{
+    let listNode = document.createElement("li");
+    listNode.innerText = food;
+    foodList.appendChild(listNode);
+}
+
+
+// Link list
+let linkList = document.getElementById("linksList");
+
+for (let webName of Object.keys(links)) 
+{
+    let listNode = document.createElement("li");
+
+    // for (let webLink of Object.values(webName)) 
+    // {
+    //     listNode.setAttribute('href', webLink.link());
+    //     //listNode.innerHTML = "<a href='webLink.link()'></a>";
+    // }
+    // let webLink = Object.values(webName);
+    
+    // listNode.innerHTML = <a href="webLink">webName</a>;
+
+    //listNode.innerHTML = <a href="Object.values(links)">webName</a>;
+    
+    listNode.innerText = webName;
+
+    linkList.appendChild(listNode);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Random Phrases</title>
+</head>
+<body>
+    <div class="container">
+        <h1>What Would Roger Say?</h1>
+        <img id="roger_image" src="media/roger_quote.jpg" alt="Roger the Alien">
+        <p id="center_text">
+        </p>
+        <p id="name">Copyright 2023 Katherine Stein</p>
+    </div>
+    <p id ="center">
+        <button class="button" onclick="displayNewQuote()">Change the Quote</button>
+    </p>
+    <script>
+        document.title = document.getElementsByTagName('h1')[0].textContent;
+        let quotes = ["It's 67 degrees outside and I hate you.", "Keviiin Ramaaage!", "Francine, I haven't been entirely truthful with you.", "It's not official 'til you change your Facebook status.", "In nature, a horse will not offer you his hoof until you gain his trust.", "Floor spaghetti", "Noooooooooo", "There might be a lesson to learn from this….if I were the kind of guy who could learn lessons.", "Let’s just hope when we get there the guy isn’t actually me this time.", "Here comes Haley, here comes Haley."];
+        document.getElementsByTagName('p')[0].innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+
+        function displayNewQuote() 
+        {
+            document.getElementsByTagName('p')[0].innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+        }
+    </script>
+</body>
+</html>
